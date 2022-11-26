@@ -1,0 +1,29 @@
+$customeFont: 'Arial';
+
+.hidden {
+    display: none;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    box-sizing: border-box;
+    font-family: $customeFont;
+
+    .pokedex-container {
+        display: flex;
+        align-items: center;
+
+        .pokemon-list {
+            display: flex;
+        }
+
+        button {
+            height: fit-content;
+            padding: 5px 20px;
+        }
+    }
+}

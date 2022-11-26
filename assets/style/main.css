@@ -1,0 +1,24 @@
+.hidden {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 200vh;
+  box-sizing: border-box;
+  font-family: "Arial";
+}
+body .pokedex-container {
+  display: flex;
+  align-items: center;
+}
+body .pokedex-container .pokemon-list {
+  display: flex;
+}
+body .pokedex-container button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px 20px;
+}/*# sourceMappingURL=main.css.map */
