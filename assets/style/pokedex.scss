@@ -1,0 +1,73 @@
+.pokedex-container {
+    margin: 200px 100px;
+    display: flex;
+    align-items: center;
+
+    .pokemon-list {
+        display: flex;
+
+        .pokemon-container {
+            height: 400px;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 5px;
+            padding: 20px 0;
+            background-color: #c4bb8dc9;
+            box-shadow: rgba(148, 148, 148, 0.17) 0px -3px 5px 0px inset, rgba(82, 82, 82, 0.15) 0px -6px 10px 0px inset, rgba(63, 63, 63, 0.1) 0px -9px 10px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(41, 41, 41, 0.09) 0px 4px 2px, rgba(43, 43, 43, 0.09) 0px 8px 4px, rgba(44, 44, 44, 0.09) 10px 16px 10px;
+            border-radius: 2px;
+            transition: 0.2s;
+
+            .bande {
+                width: 100%;
+                height: 10px;
+                background-color: #ceef46;
+                filter: blur(0.5px);
+            }
+
+            .pokemon-image {
+                width: 90%;
+                margin: 10px auto;
+
+                img {
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
+
+            .pokemon-name {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 600;
+                transform: rotate(90deg);
+            }
+
+            .pokemon-id {
+                font-size: 30px;
+                font-weight: 700;
+                flex: 2;
+                align-items: end;
+                position: relative;
+
+                p {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                
+            }
+        }
+
+        .pokemon-container:hover {
+            transform: translateY(-12px);
+        }
+    }
+
+    button {
+        height: fit-content;
+        padding: 5px 20px;
+    }
+}

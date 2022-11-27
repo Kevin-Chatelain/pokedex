@@ -2,6 +2,8 @@ function showPokemon(data, pokemonAmount, startingId) {
   for(let i=startingId; i<pokemonAmount; i++) {
       document.querySelector('.pokemon-list')
       .innerHTML += `<div class="pokemon-container" id="${data[i].id}">
+                        <div class="bande"></div>
+
                         <div class="pokemon-image">
                            <img src="${data[i].sprite}" />
                         </div>
@@ -9,6 +11,12 @@ function showPokemon(data, pokemonAmount, startingId) {
                         <div class="pokemon-name">
                           <p>${data[i].name}</p>
                         </div>
+
+                        <div class="pokemon-id">
+                          <p>${data[i].id}</p>
+                        </div>
+
+                        <div class="bande"></div>
                      </div>`;
      }
 }
