@@ -1,0 +1,11 @@
+.fiche-pokemon {
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 5;
+  transform: translateY(-100vh);
+}
+.fiche-pokemon .bg-pokemon {
+  display: flex;
+}/*# sourceMappingURL=fiche-pokemon.css.map */

@@ -22,7 +22,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(136, 136, 136);
+  background: rgb(167, 167, 167);
   border-radius: 3px;
   height: 5px;
 }
@@ -65,10 +65,10 @@ body .background .infos .titre h1 {
 }
 body .background .infos .titre .pokeball-image {
   width: 80px;
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 body .background .infos .nombre-pokemon {
-  font-size: 25px;
+  font-size: 20px;
   color: #FFF;
   font-weight: 400;
   transform: translateY(-5px);
@@ -76,16 +76,16 @@ body .background .infos .nombre-pokemon {
 body .background .infos .nombre-pokemon span {
   font-family: "Poppins";
   font-weight: 600;
-  font-size: 30px;
+  font-size: 25px;
 }
 body .background .filtre {
   width: 80%;
-  margin: 70px auto 30px auto;
+  margin: 60px auto 30px auto;
   display: flex;
 }
 body .background .filtre .search-bar {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   padding: 10px 15px;
   border-radius: 5px;
   width: 400px;
@@ -109,7 +109,7 @@ body .background .filtre .search-bar .loupe {
   justify-content: right;
 }
 body .background .filtre .generation, body .background .filtre .types {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   border: none;
   border-radius: 5px;
   padding-right: 35px;
