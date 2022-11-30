@@ -29,7 +29,15 @@ async function printPokemonData(data, pokemonId) {
   typesArray.forEach(types => {
     document.querySelector('.fiche-infos-types').innerHTML += `<img src="${types.image}" alt="type-${types.name}" />`;
   });
+ 
+  Object.entries(data[pokemonId].stats).forEach(stat => {
+    const [key, value] = stat;
+    document.querySelector('.'+key+' .stat').innerText = value;
+  })
+  
+  
 }
+
 
 
 fetch('https://pokebuildapi.fr/api/v1/pokemon')
@@ -45,14 +53,27 @@ fetch('https://pokebuildapi.fr/api/v1/pokemon')
   document.querySelector('.showmore-button').addEventListener('click', () => {
     let lastPokemon = document.querySelector('.pokemon-container:last-child').getAttribute('id');
     showPokemon(json, (parseInt(lastPokemon) + showPokemonAmount), lastPokemon);
+    document.querySelectorAll('.pokemon-container').forEach(pokemonContainer => {
+      pokemonContainer.addEventListener('click', function() {
+        let pokemonId = parseInt(this.getAttribute('id')) - 1;
+        document.querySelector('.fiche-infos-types').innerHTML = "";
+        printPokemonData(json, pokemonId);
+        document.querySelector('.fiche-pokemon').classList.toggle('show-fiche');
+      })
+    });
   });
 
   document.querySelectorAll('.pokemon-container').forEach(pokemonContainer => {
     pokemonContainer.addEventListener('click', function() {
       let pokemonId = parseInt(this.getAttribute('id')) - 1;
       document.querySelector('.fiche-infos-types').innerHTML = "";
-      printPokemonData(json, pokemonId)
+      printPokemonData(json, pokemonId);
+      document.querySelector('.fiche-pokemon').classList.toggle('show-fiche');
     })
+  });
+
+  document.querySelector('.croix').addEventListener('click', () => {
+    document.querySelector('.fiche-pokemon').classList.toggle('show-fiche');
   });
 
 });

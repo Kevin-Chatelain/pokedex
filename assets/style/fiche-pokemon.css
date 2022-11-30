@@ -4,8 +4,9 @@
   min-height: 100vh;
   width: 100%;
   z-index: 5;
+  transition: 0.4s;
   transform: translateY(-100vh);
 }
-.fiche-pokemon .bg-pokemon {
+.fiche-pokemon .fiche-bg {
   display: flex;
 }/*# sourceMappingURL=fiche-pokemon.css.map */
