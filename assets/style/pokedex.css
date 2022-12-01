@@ -27,6 +27,10 @@
   height: 5px;
 }
 
+.show-fiche {
+  transform: translateY(0vh) !important;
+}
+
 body {
   margin: 0;
   padding: 0;

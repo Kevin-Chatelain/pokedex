@@ -1,3 +1,5 @@
+@import "./main.scss";
+
 .fiche-pokemon {
     position: absolute;
     top: 0;
@@ -5,10 +7,117 @@
     width: 100%;
     z-index: 5;
     transition: 0.4s;
-
     transform: translateY(-100vh);
+    color: #FFF;
 
     .fiche-bg {
         display: flex;
+        padding: 60px;
+
+        .fiche-left {
+            width: 50%;
+
+            .fiche-infos {
+                margin-bottom: 50px;
+
+                .fiche-infos-nom {
+
+                    h1 {
+                        text-transform: uppercase;
+                        font-family: $customeFont1;
+                        font-size: 45px;
+                    }
+                }
+
+                .fiche-infos-types {
+                    width: 100px;
+                    display: flex;
+                }
+            }
+
+            .statistiques {
+
+                .barres-container {
+                    
+
+                    &>div {
+                        display: flex;
+                        align-items: center;
+
+                        p:nth-child(1) {
+                            width: 100px;
+                        }
+
+                        .barre-stat-container {
+                            height: 20px;
+                            
+                            margin: 10px 0;
+                            width: 60%;
+                            background-color: #d9d9d941;
+                            border-radius: 3px;
+                            margin-right: 40px;
+                            overflow: hidden;
+                            
+                            .barre-stat {
+                                height: inherit;
+                                width: 5%;
+                                background-color: #FFF;
+                                border-radius: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .fiche-right {
+            width: 50%;
+
+            .fiches-actions {
+                display: flex;
+                width: 100%;
+                margin-bottom: 50px;
+
+                .search-bar {
+                    margin-right: auto;
+                }
+            }
+
+            .fiche-illustration {
+                .illustrations-bg {
+                    background-image: url('../img/pokeball-grand.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    display: flex;
+                    justify-content: center;
+                    min-height: 600px;
+                    align-items: center;
+
+                    .illustration-pokemon {
+                        width: 500px;
+                    }
+                }
+            }
+
+            .fiche-navigation {
+                display: flex;
+                margin-top: 30px;
+
+                .nav-left {
+                    margin-right: auto;
+
+                    .left-arrow {
+                        cursor: pointer;
+                    }
+                }
+
+                .nav-right {
+                    .right-arrow {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
     }
 }

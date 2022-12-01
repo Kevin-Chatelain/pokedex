@@ -37,6 +37,34 @@ $backgroundColor: #A99786;
     transform: translateY(0vh) !important ;
 }
 
+.search-bar {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 400px;
+    justify-content: space-between;
+    backdrop-filter: blur(4px);
+
+    input {
+        background: none;
+        border: none;
+        width: 90%;
+        color: #272727;
+        font-size: 18px;
+        font-family: $customeFont2;
+        font-weight: 500;
+    }
+
+    .loupe {
+        width: 10%;
+        display: flex;
+        margin-right: 10px;
+        justify-content: right;
+
+    }
+}
+
 
 body {
     margin: 0;
@@ -102,34 +130,6 @@ body {
             width: 80%;
             margin: 60px auto 30px auto;
             display: flex;
-
-            .search-bar {
-                display: flex;
-                background-color: rgba(255, 255, 255, 0.65);
-                padding: 10px 15px;
-                border-radius: 5px;
-                width: 400px;
-                justify-content: space-between;
-                backdrop-filter: blur(4px);
-
-                input {
-                    background: none;
-                    border: none;
-                    width: 90%;
-                    color: #272727;
-                    font-size: 18px;
-                    font-family: $customeFont2;
-                    font-weight: 500;
-                }
-
-                .loupe {
-                    width: 10%;
-                    display: flex;
-                    margin-right: 10px;
-                    justify-content: right;
-
-                }
-            }
 
             .generation, .types {
                 background-color: rgba(255, 255, 255, 0.65);

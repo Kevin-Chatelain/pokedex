@@ -1,3 +1,149 @@
+.hidden {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* img {
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(167, 167, 167);
+  border-radius: 3px;
+  height: 5px;
+}
+
+.show-fiche {
+  transform: translateY(0vh) !important;
+}
+
+.search-bar {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 400px;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.search-bar input {
+  background: none;
+  border: none;
+  width: 90%;
+  color: #272727;
+  font-size: 18px;
+  font-family: "Nunito";
+  font-weight: 500;
+}
+.search-bar .loupe {
+  width: 10%;
+  display: flex;
+  margin-right: 10px;
+  justify-content: right;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-size: cover;
+  background-repeat: repeat;
+}
+body .background {
+  background-color: #A99786;
+  background-image: url(../img/background-low.png);
+  background-blend-mode: luminosity;
+  width: 100%;
+  background-size: cover;
+  background-repeat: repeat;
+  position: absolute;
+  height: 100vh;
+  padding-top: 60px;
+}
+body .background .infos {
+  width: 80%;
+  margin: 0 auto;
+}
+body .background .infos .titre {
+  display: flex;
+}
+body .background .infos .titre h1 {
+  font-family: "Poppins";
+  font-size: 40px;
+  color: #FFF;
+  margin-right: 30px;
+  text-transform: uppercase;
+}
+body .background .infos .titre .pokeball-image {
+  width: 80px;
+  transform: translateY(-10px);
+}
+body .background .infos .nombre-pokemon {
+  font-size: 20px;
+  color: #FFF;
+  font-weight: 400;
+  transform: translateY(-5px);
+}
+body .background .infos .nombre-pokemon span {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 25px;
+}
+body .background .filtre {
+  width: 80%;
+  margin: 60px auto 30px auto;
+  display: flex;
+}
+body .background .filtre .generation, body .background .filtre .types {
+  background-color: rgba(255, 255, 255, 0.65);
+  border: none;
+  border-radius: 5px;
+  padding-right: 35px;
+  padding-left: 35px;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  margin-left: 50px;
+  display: grid;
+  align-items: center;
+}
+body .background .filtre .generation select, body .background .filtre .types select {
+  border: none;
+  background: none;
+  color: #272727;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Nunito";
+}
+body .background .filtre .search-bar, body .background .filtre .types, body .background .filtre .generation {
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+body .background .barre-pokedex {
+  margin-top: 20px;
+  height: 30px;
+  width: 100%;
+  background-color: #FFF;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25), inset 0px 3px 6px 0px rgba(74, 74, 74, 0.25);
+}
+
 .fiche-pokemon {
   position: absolute;
   top: 0;
@@ -6,7 +152,82 @@
   z-index: 5;
   transition: 0.4s;
   transform: translateY(-100vh);
+  color: #FFF;
 }
 .fiche-pokemon .fiche-bg {
   display: flex;
+  padding: 60px;
+}
+.fiche-pokemon .fiche-bg .fiche-left {
+  width: 50%;
+}
+.fiche-pokemon .fiche-bg .fiche-left .fiche-infos {
+  margin-bottom: 50px;
+}
+.fiche-pokemon .fiche-bg .fiche-left .fiche-infos .fiche-infos-nom h1 {
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 45px;
+}
+.fiche-pokemon .fiche-bg .fiche-left .fiche-infos .fiche-infos-types {
+  width: 100px;
+  display: flex;
+}
+.fiche-pokemon .fiche-bg .fiche-left .statistiques .barres-container > div {
+  display: flex;
+  align-items: center;
+}
+.fiche-pokemon .fiche-bg .fiche-left .statistiques .barres-container > div p:nth-child(1) {
+  width: 100px;
+}
+.fiche-pokemon .fiche-bg .fiche-left .statistiques .barres-container > div .barre-stat-container {
+  height: 20px;
+  margin: 10px 0;
+  width: 60%;
+  background-color: rgba(217, 217, 217, 0.2549019608);
+  border-radius: 3px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.fiche-pokemon .fiche-bg .fiche-left .statistiques .barres-container > div .barre-stat-container .barre-stat {
+  height: inherit;
+  width: 5%;
+  background-color: #FFF;
+  border-radius: inherit;
+}
+.fiche-pokemon .fiche-bg .fiche-right {
+  width: 50%;
+}
+.fiche-pokemon .fiche-bg .fiche-right .fiches-actions {
+  display: flex;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.fiche-pokemon .fiche-bg .fiche-right .fiches-actions .search-bar {
+  margin-right: auto;
+}
+.fiche-pokemon .fiche-bg .fiche-right .fiche-illustration .illustrations-bg {
+  background-image: url("../img/pokeball-grand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  min-height: 600px;
+  align-items: center;
+}
+.fiche-pokemon .fiche-bg .fiche-right .fiche-illustration .illustrations-bg .illustration-pokemon {
+  width: 500px;
+}
+.fiche-pokemon .fiche-bg .fiche-right .fiche-navigation {
+  display: flex;
+  margin-top: 30px;
+}
+.fiche-pokemon .fiche-bg .fiche-right .fiche-navigation .nav-left {
+  margin-right: auto;
+}
+.fiche-pokemon .fiche-bg .fiche-right .fiche-navigation .nav-left .left-arrow {
+  cursor: pointer;
+}
+.fiche-pokemon .fiche-bg .fiche-right .fiche-navigation .nav-right .right-arrow {
+  cursor: pointer;
 }/*# sourceMappingURL=fiche-pokemon.css.map */
