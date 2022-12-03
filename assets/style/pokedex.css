@@ -31,6 +31,32 @@
   transform: translateY(0vh) !important;
 }
 
+.search-bar {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 400px;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.search-bar input {
+  background: none;
+  border: none;
+  width: 90%;
+  color: #272727;
+  font-size: 18px;
+  font-family: "Nunito";
+  font-weight: 500;
+}
+.search-bar .loupe {
+  width: 10%;
+  display: flex;
+  margin-right: 10px;
+  justify-content: right;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -86,31 +112,6 @@ body .background .filtre {
   width: 80%;
   margin: 60px auto 30px auto;
   display: flex;
-}
-body .background .filtre .search-bar {
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.65);
-  padding: 10px 15px;
-  border-radius: 5px;
-  width: 400px;
-  justify-content: space-between;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-}
-body .background .filtre .search-bar input {
-  background: none;
-  border: none;
-  width: 90%;
-  color: #272727;
-  font-size: 18px;
-  font-family: "Nunito";
-  font-weight: 500;
-}
-body .background .filtre .search-bar .loupe {
-  width: 10%;
-  display: flex;
-  margin-right: 10px;
-  justify-content: right;
 }
 body .background .filtre .generation, body .background .filtre .types {
   background-color: rgba(255, 255, 255, 0.65);

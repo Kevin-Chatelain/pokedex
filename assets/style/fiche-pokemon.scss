@@ -13,6 +13,7 @@
     .fiche-bg {
         display: flex;
         padding: 60px;
+        background-color: #A99786;
 
         .fiche-left {
             width: 50%;
@@ -29,13 +30,85 @@
                     }
                 }
 
+                .fiche-infos-id {
+                    
+                    p {
+                        font-size: 23px;
+                    }
+                }
+
                 .fiche-infos-types {
-                    width: 100px;
+                    margin-top: 15px;
+                    width: 120px;
                     display: flex;
+
+                    img:nth-child(1) {
+                        margin-right: 20px;
+                    }
                 }
             }
 
+
+            .fiche-evolutions {
+                display: flex;
+                width: 70%;
+                justify-content: space-between;
+                margin: 80px 0;
+
+                &>div {
+                    
+
+                    h3 {
+                        font-size: 25px;
+                        margin-bottom: 20px;
+                    }
+
+                    .pre-container>p, .evo-container>p {
+                        font-weight: 700;
+                            font-size: 22px;
+                            font-family: $customeFont1;
+                    }
+
+                    &>div {
+
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        height: 150px;
+                        
+                        &>div {
+                            display: flex;
+                            align-items: center;
+
+                            .pre-image, .evo-image {
+                                background-color: #d9d9d97e;
+                                border-radius: 50%;
+                                flex-shrink: 0;
+                                box-shadow: inset 0 0 6px 0 rgba(0, 0, 0, 0.3);
+                                margin-right: 20px;
+                                padding: 5px 10px;
+                            }
+
+                            .pre-infos, .evo-infos {
+                                p:nth-child(1) {
+                                    font-family: $customeFont1;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                    font-size: 22px;
+                                }
+
+                                p:nth-child(2) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .statistiques {
+                h2 {
+                    font-size: 28px;
+                    text-transform: capitalize;
+                }
 
                 .barres-container {
                     
@@ -44,17 +117,21 @@
                         display: flex;
                         align-items: center;
 
+                        p {
+                            font-size: 20px;
+                        }
+
                         p:nth-child(1) {
-                            width: 100px;
+                            width: 120px;
                         }
 
                         .barre-stat-container {
                             height: 20px;
                             
-                            margin: 10px 0;
+                            margin: 20px 0;
                             width: 60%;
                             background-color: #d9d9d941;
-                            border-radius: 3px;
+                            border-radius: 1px;
                             margin-right: 40px;
                             overflow: hidden;
                             
@@ -75,26 +152,38 @@
 
             .fiches-actions {
                 display: flex;
+                justify-content: right;
                 width: 100%;
-                margin-bottom: 50px;
+                margin-bottom: 100px;
 
                 .search-bar {
-                    margin-right: auto;
+                    margin-right: 150px;
                 }
             }
 
             .fiche-illustration {
+                margin-bottom: 90px;
+
                 .illustrations-bg {
-                    background-image: url('../img/pokeball-grand.svg');
-                    background-repeat: no-repeat;
-                    background-position: center;
                     display: flex;
+                    position: relative;
                     justify-content: center;
                     min-height: 600px;
                     align-items: center;
 
                     .illustration-pokemon {
-                        width: 500px;
+                        width: 600px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;   
+                            transform: translate(-50%, -50%);
+                        }
                     }
                 }
             }
@@ -102,6 +191,23 @@
             .fiche-navigation {
                 display: flex;
                 margin-top: 30px;
+
+                .nav-left, .nav-right {
+                    display: flex;
+                    align-items: center;
+
+                    .left-arrow {
+                        margin-right: 20px;
+                    }
+
+                    .right-arrow {
+                        margin-left: 20px;
+                    }
+                }
+
+                .nav-right {
+                    flex-direction: row-reverse;
+                }
 
                 .nav-left {
                     margin-right: auto;
