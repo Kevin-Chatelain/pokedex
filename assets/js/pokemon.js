@@ -62,7 +62,7 @@ async function printPokemonData(data, pokemonId) {
   // Types 
   let typesArray = data[pokemonId].apiTypes;
   typesArray.forEach(types => {
-    let typeImgPath = '../assets/img/pokemon-types/'+types.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")+'.png';
+    let typeImgPath = 'assets/img/pokemon-types/'+types.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")+'.png';
     document.querySelector('.fiche-infos-types').innerHTML += `<img src="${typeImgPath}" alt="type-${types.name}" />`;
   });
 
